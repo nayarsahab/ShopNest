@@ -1,0 +1,24 @@
+{
+  "name": "shopnest",
+  "version": "1.0.0",
+  "description": "Ecom Project",
+  "keywords": [
+    "testing",
+    "phase"
+  ],
+  "license": "ISC",
+  "author": "ranjit",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "install-all": "npm install && cd backend && npm install && cd ../frontend/shopnest && npm install",
+    "build": "cd frontend/shopnest && npm install && npm run build",
+    "start": "cd backend && npm start",
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:server": "cd backend && npm run dev",
+    "dev:client": "cd frontend/shopnest && npm start",
+  },
+  "dependencies": {
+    "concurrently": "^10.0.5"
+  }
+}
